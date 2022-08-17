@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate and Save</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body class="bg-gray-300 p-0 sm:p-10">
+    <div class="container bg-white mx-auto rounded-xl p-4">
+      <!-- Header starts -->
+      <header class="">
+        <h1 class="text-orange-600 text-center font-bold text-4xl mt-4 mb-8">
+          Calculate and Save
+        </h1>
+      </header>
+      <!-- Header ends -->
+
+      <!-- Main starts -->
+      <main class="">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+          <div>
+            <img class="w-full" src="images/life cycle cost.jpg" alt="" />
+          </div>
+          <div class="bg-gray-100 p-0 md:p-3 xl:p-24 text-center rounded">
+            <!-- Income and Expense calculation block -->
+
+            <div class="inc-exp p-4">
+              <form action="" class="">
+                <!-- Income block -->
+
+                <div class="income-block">
+                  <h2 class="text-3xl font-semibold mb-4">Income</h2>
+                  <div
+                    class="input-group grid grid-cols-3 justify-items-end items-center"
+                  >
+                    <label for="income-input" class="text-xl mr-2"
+                      >Income:
+                    </label>
+                    <input
+                      id="income-input"
+                      type="text"
+                      class="input outline-0 rounded p-2 w-full col-span-2 focus:shadow-lg focus:shadow-blue-100"
+                    />
+                  </div>
+
+                  <!-- error display -->
+                  <p
+                    id="income-input-error"
+                    class="error-display font-bold text-red-600 hidden"
+                  >
+                    Error
+                  </p>
+                </div>
+
+                <!-- Expense Block -->
+                <div class="expense-block mt-8">
+                  <h2 class="text-3xl font-semibold mb-4">Expense</h2>
+                  <!-- Input Gourp -->
+                  <div
+                    class="input-group grid grid-cols-3 justify-items-end items-center mb-2"
+                  >
+                    <label for="food-input" class="text-xl mr-2">Food: </label>
+                    <input
+                      id="food-input"
+                      type="text"
+                      class="input outline-0 rounded p-2 w-full col-span-2 focus:shadow-lg focus:shadow-blue-100"
+                    />
+                  </div>
+
+                  <!-- error display -->
+                  <p
+                    id="food-input-error"
+                    class="error-display font-bold text-red-600 hidden"
+                  >
+                    Error
+                  </p>
+
+                  <!-- Input Gourp -->
+                  <div
+                    class="input-group grid grid-cols-3 justify-items-end items-center mb-2"
+                  >
+                    <label for="rent-input" class="text-xl mr-2">Rent: </label>
+                    <input
+                      id="rent-input"
+                      type="text"
+                      class="input outline-0 rounded p-2 w-full col-span-2 focus:shadow-lg focus:shadow-blue-100"
+                    />
+                  </div>
+
+                  <!-- error display -->
+                  <p
+                    id="rent-input-error"
+                    class="error-display font-bold text-red-600 hidden"
+                  >
+                    Error
+                  </p>
+
+                  <!-- Input Gourp -->
+                  <div
+                    class="input-group grid grid-cols-3 justify-items-end items-center mb-2"
+                  >
+                    <label for="clothes-input" class="text-xl mr-2"
+                      >Clothes:
+                    </label>
+                    <input
+                      id="clothes-input"
+                      type="text"
+                      class="input outline-0 rounded p-2 w-full col-span-2 focus:shadow-lg focus:shadow-blue-100"
+                    />
+                  </div>
+                  <!-- error display -->
+                  <p
+                    id="clothes-input-error"
+                    class="error-display font-bold text-red-600 hidden"
+                  >
+                    Error
+                  </p>
+                </div>
+
+                <!-- Submit button -->
+                <button
+                  id="btn-inc-exp"
+                  type="submit"
+                  class="my-3 bg-green-500 text-white px-8 py-2 rounded-xl font-bold tracking-wider uppercase w-40"
+                >
+                  Calculate
+                </button>
+              </form>
+
+              <!-- Income Expenses Output -->
+              <div class="inc-exp-output">
+                <h2 class="total-exp-wrapper text-2xl font-semibold my-3">
+                  Total Expenses: <span id="total-exp">0</span>
+                </h2>
+                <h2 class="balance-wrapper text-2xl font-semibold my-3">
+                  Balance: <span id="balance">0</span>
+                </h2>
+              </div>
+            </div>
+
+            <hr class="mb-8" />
+
+            <!-- Money Saving block -->
+            <div class="saving">
+              <form action="" class="">
+                <div class="container flex gap-3 justify-between">
+                  <!-- Input Gourp -->
+                  <div
+                    class="input-group grid grid-cols-2 justify-items-end items-center mb-2"
+                  >
+                    <label for="saving-input" class="text-xl mr-2"
+                      >saving:
+                    </label>
+                    <input
+                      id="saving-input"
+                      type="text"
+                      class="input outline-0 rounded p-2 w-full focus:shadow-lg focus:shadow-blue-100"
+                    />
+                  </div>
+                  <div class="self-center">%</div>
+
+                  <!-- Submit button -->
+                  <button
+                    id="btn-saving"
+                    type="submit"
+                    class="bg-green-500 text-white px-8 py-2 rounded-xl font-semibold tracking-wider uppercase w-60"
+                  >
+                    Save
+                  </button>
+                </div>
+
+                <!-- error display -->
+                <p
+                  id="saving-input-error"
+                  class="error-display font-bold text-red-600 hidden"
+                >
+                  Error
+                </p>
+              </form>
+
+              <!-- Saving Output -->
+              <div class="saving-output">
+                <h2 class="saving-amount-wrapper text-2xl font-semibold my-3">
+                  Saving Amount: <span id="saving-amount">0</span>
+                </h2>
+                <h2
+                  class="remaining-balance-wrapper text-2xl font-semibold my-3"
+                >
+                  Remaining Balance: <span id="remaining-balance">0</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- Main ends -->
+
+      <!-- Footer starts -->
+      <footer></footer>
+      <!-- Footer ends -->
+    </div>
+
+    <!-- All Scripts -->
+    <script src="my-app.js"></script>
+  </body>
+</html>
